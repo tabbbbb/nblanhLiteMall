@@ -1,0 +1,33 @@
+<navbar parameter='{{parameter}}'></navbar>
+<view class="promoter-order">
+    <view class='promoterHeader bg-color'>
+        <view class='headerCon acea-row row-between-wrapper'>
+            <view>
+                <view class='name'>累积推广订单</view>
+                <view><text class='num'>{{count || 0}}</text>单</view>
+            </view>
+            <view class='iconfont icon-2'></view>
+        </view>
+    </view>
+    <view class='list'>
+      <block wx:for="{{spreadOrderList}}" wx:key>
+       <view class='item'>
+          <view class='listn'>
+             <view class='itenm'>
+                <view class='top acea-row row-between-wrapper'>
+                   <view class='pictxt acea-row row-between-wrapper'>
+                      <view class='pictrue'><image src='{{item.avatar}}'></image></view>
+                      <view class='text line1'>{{item.nickName}}</view>
+                   </view>
+                   <view class='money'>返佣：<text class='font-color'>￥{{item.money}}</text></view>
+                </view>
+                <view class='bottom'>
+                   <view><text class='name'>订单编号：</text>{{item.orderSn}}</view>
+                   <view><text class='name'>下单时间：</text>{{item.time}}</view>
+                </view>
+             </view>
+          </view>
+       </view>
+      </block> 
+    </view>
+</view>

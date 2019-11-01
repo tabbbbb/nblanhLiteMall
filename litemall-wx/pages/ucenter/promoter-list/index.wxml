@@ -1,0 +1,29 @@
+<navbar parameter='{{parameter}}'></navbar>
+<view class="promoter-list">
+    <view class='promoterHeader bg-color'>
+        <view class='headerCon acea-row row-between-wrapper'>
+            <view>
+                <view class='name'>推广人数</view>
+                <view><text class='num'>{{count || 0}}</text>人</view>
+            </view>
+            <view class='iconfont icon-tuandui'></view>
+        </view>
+    </view>
+    <view class='list'>
+        <block wx:for="{{spreadUserList}}" wx:key>
+          <view class='item acea-row row-between-wrapper'>
+              <view class="picTxt acea-row row-between-wrapper">
+                  <view class='pictrue'><image src='{{item.avatar}}'></image></view>
+                  <view class='text'>
+                      <view class='name line1'>{{item.nickName}}</view>
+                      <view>加入时间: {{item.time}}</view>
+                  </view>
+              </view>
+              <view class="right">
+                  <view>{{item.numberCount ? item.numberCount : 0}} 元</view>
+              </view>
+          </view>
+        </block>
+    </view>
+</view>
+

@@ -1,0 +1,4 @@
+<image src="{{filePath}}" mode="widthFix" show-menu-by-longpress="true"  class="img"></image>
+
+<view class='keep bg-color' bindtap='saveQR'>保存二维码</view>
+<!-- <authorize bind:onLoadFun="onLoadFun"></authorize> -->

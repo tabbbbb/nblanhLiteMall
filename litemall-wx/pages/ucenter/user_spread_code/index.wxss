@@ -1,0 +1,3 @@
+page{background-color:#a3a3a3!important;}
+.img{margin:100rpx auto;text-align:center;width: 100%;height: 100%}
+.keep{font-size:30rpx;color:#fff;width:600rpx;height:80rpx;border-radius:50rpx;text-align:center;line-height:80rpx;margin:38rpx auto;}

@@ -1,0 +1,29 @@
+<navbar parameter='{{parameter}}'></navbar>
+<view class='commission-details'>
+    <view class='promoterHeader bg-color'>
+        <view class='headerCon acea-row row-between-wrapper'>
+            <view>
+                <view class='name'>累计提现金额</view>
+                <view class='money'>￥<text class='num'>{{withdrawMoney || 0}}</text></view>
+            </view>
+            <view class='iconfont icon-jinbi1'></view>
+        </view>
+    </view>
+    <view class='sign-record'>
+     <block wx:for="{{withdrawalList}}" wx:key>
+      <view class='list'>
+          <view class='item'>
+            <view class='listn'>
+              <view class='itemn acea-row row-between-wrapper'>
+                <view>
+                  <view><text class='name'>提现时间：</text>{{item.addTime}}</view>
+                  <view class='name'><text class='name'>状态：</text>{{item.status}}</view>
+                  </view>
+                  <view class='num'><text class='name'>提现金额：</text>{{item.amount}}</view>
+                </view>
+            </view>
+          </view>
+      </view>
+     </block> 
+    </view>
+</view>

@@ -1,0 +1,60 @@
+<!-- <navbar parameter='{{parameter}}'></navbar>  -->
+<view class='member-center'>
+  <view class='header'>
+   <swiper   previous-margin="30px" next-margin="30px">
+     <block >
+        <swiper-item>
+           <view class="memberBg"  mode='aspectFill'>
+            
+              <view class='name'>您的会员等级是{{vipclass}}</view>
+              <image class="vipimage" src="../../../static/images/vip1.png" style="width:100rpx;"></image>
+              <view class='discount'>可享受商品折扣:{{discount}}<text class='iconfont icon-zhekou'></text></view>
+              <view class='nav acea-row' >
+                 <view class='item' >
+                    <view class='num'>{{vipindex}}</view>
+                    <view>当前积分</view>
+                 </view>
+              </view>
+              <!-- <view class='lock'><text class='iconfont icon-quanxianguanlisuozi'></text>该会员等级尚未解锁</view>
+              <view class='lock' ><text class='iconfont icon-xuanzhong1'></text>已解锁更高等级</view> -->
+             </view>
+          </swiper-item>
+        </block>
+     </swiper>
+   </view>
+   <view class='wrapper'>
+     <view class='title acea-row row-between-wrapper'>
+        <view><text class='iconfont icon-jingyanzhi'></text>会员升级要求</view>
+        <view class='num'><text class='current'>{{vipindex || 0}}</text>/{{nextclass || 0}}</view>
+     </view>
+     <view class='list'>
+        <view class='item' >
+           <view class='top acea-row row-between-wrapper'>
+              <view class='name'  data-index='1'><text  class='iconfont icon-wenti'></text></view>
+              
+              <view >距离下一级</view>
+           </view>
+           <view class="cu-progress">
+             <view class='bg-red' style="width:{{upgrade}}%;"></view>
+           </view>
+           <view class='experience acea-row row-between-wrapper'>
+             <view></view>
+             <view><text class='num'>{{vipindex || 0}}</text>/{{nextclass || 0}}</view>
+           </view>
+        </view>
+     </view>
+   </view>
+   <view class="order-box" >
+      <view class="order-item" wx:for='{{viplist}}' wx:for-item="viplist" wx:key=''>
+        <view class="l">
+          <text class="name">{{viplist.vipType}}会员</text>
+        </view>
+        <view class="r">
+          <text class="txt">{{viplist.discount}}折</text>
+        </view>
+      </view>
+    </view>
+
+   <!-- <recommend ></recommend> -->
+</view>
+<!-- <authorize bind:onLoadFun="onLoadFun"></authorize> -->
